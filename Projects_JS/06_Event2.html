@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JAVACSRIPT ASYNCHRONUS PROJECT </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const sayCall = function() {
+    //     console.log('Laibaa')
+    //    }
+
+    const changeText = function() {
+            document.querySelector('h1').innerHTML = "Complete JS WITH PROJECTS"
+        }
+        //set timeout works any task after specificcally changed task 
+
+    const changeMe = setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeMe)
+        console.log("stopped");
+    })
+
+    //setTimeout-->runs only one time 
+    //setInterval-->runs continuosly
+</script>
+
+</html>
